@@ -1,0 +1,182 @@
+/************************************************************
+
+Theme Name: Simple
+Description: A simple theme for wordPress.
+Author: Genevieve Masioni
+Author URI: http://genevievemasioni.com/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+Tags: simple, one-column, right-sidebar
+
+**************************************************************
+
+Table of Contents:
+
+  0. GLOBAL
+  1. HEADER
+  2. MENU
+  3. MAIN
+  4. BLOGPOST
+  5. SIDEBAR
+
+**************************************************************/
+
+
+/************************************************
+0.	GLOBAL
+************************************************/
+
+:root {
+  --base-font-size: 16px;
+  --base-font-family: "Open Sans", sans-serif;
+  --title-font-family: "Montserrat", sans-serif;
+  --base-padding: 1rem;
+  --brand-color: rgb(231, 231, 231);
+  --base-color: rgb(51, 51, 51);
+  --border: .1rem solid var(--brand-color);
+}
+
+html, body {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--base-font-family);
+  color: var(--base-color);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--base-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font-family);
+}
+
+img {
+  width: 100%;
+}
+
+/************************************************
+1.	HEADER
+************************************************/
+
+header {
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.site-title {
+  flex: 1;
+}
+
+/************************************************
+2.	MENU
+************************************************/
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin: 0 var(--base-padding);
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.mobile-menu {
+  display: none;
+  margin: 0 var(--base-padding);
+}
+
+/************************************************
+3.	MAIN
+************************************************/
+
+main {
+  display: flex;
+  margin: 1.5rem auto;
+}
+
+/************************************************
+4.	BLOGPOST
+************************************************/
+
+.blogpost {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.blogpost-title {
+  line-height: 1.5;
+}
+
+.blogpost-meta li {
+  display: inline;
+  margin: 0 .5rem;
+}
+
+.blogpost-excerpt {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.blogpost-readmore {
+  border-right: var(--border);
+  border-left: var(--border);
+  padding: var(--base-padding);
+}
+
+/************************************************
+5.	SIDEBAR
+************************************************/
+
+.sidebar {
+  margin: 1rem;
+  padding: 0 2rem;
+  flex-basis: 50%;
+}
+
+.widget-list {
+  padding: 0;
+}
+
+/************************************************
+6.	FOOTER
+************************************************/
+
+footer {
+  border-top: var(--border);
+  text-align: center;
+}
+
+/************************************************
+7.	MEDIA QUERIES
+************************************************/
+
+@media only screen and (max-width: 766px){
+  main {
+    flex-wrap: wrap;
+  }
+  .content {
+    flex: auto;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
