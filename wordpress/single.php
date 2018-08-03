@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <section class="content">
-  <?php if(have_posts()) : ?>
-  <?php while (have_posts()) : the_post(); ?>
+  <?php if(is_single()) : the_post(); ?>
     <article class="blogpost single">
       <?php if(has_post_thumbnail()) : ?>
         <?php the_post_thumbnail(); ?>
@@ -43,7 +42,6 @@
       </section>
         <?php the_content(); ?>
     </article>
-  <?php endwhile; ?>
   <?php comments_template(); ?>
 <?php endif; ?>
 </section>
