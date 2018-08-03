@@ -54,30 +54,9 @@
   <p>No posts to display yet.</p>
 <?php endif; ?>
 </section>
-<section class="sidebar">
-  <section class="widget">
-    <h3 class="widget-title">Recent Posts</h3>
-    <ul class="widget-list">
-      <li>Adaptive Vs. Responsive </li>
-      <li>Web Design is 95% Typography</li>
-      <li>Paper by FiftyThree</li>
-    </ul>
-  </section>
-  <section class="widget">
-    <h3 class="widget-title">Archives</h3>
-    <ul class="widget-list">
-      <li>November 2014</li>
-      <li>September 2014</li>
-      <li>January 2013</li>
-    </ul>
-  </section>
-  <section class="widget">
-    <h3 class="widget-title">Category</h3>
-    <ul class="widget-list">
-      <li>Web Design</li>
-      <li>Web Development</li>
-      <li>SEO</li>
-    </ul>
-  </section>
+<?php if(is_active_sidebar('sidebar')) : ?>
+  <section class="sidebar">
+  <?php dynamic_sidebar('sidebar'); ?>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>
