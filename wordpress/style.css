@@ -136,6 +136,15 @@ main {
   padding: var(--base-padding);
 }
 
+.blogpost.single {
+  border-bottom: var(--border);
+  padding-bottom: var(--base-padding);
+}
+
+.blogpost img {
+  margin: var(--base-padding) auto;
+}
+
 /************************************************
 5.	SIDEBAR
 ************************************************/
