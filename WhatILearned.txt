@@ -1,0 +1,10 @@
+Set up a local dev env for WordPress theme development
+using MAMP
+
+Create a WordPress theme from scratch
+- static version
+- understand the functions.php file
+- filter with archive.php
+- display blog posts and pages
+
+Practice my php skills
